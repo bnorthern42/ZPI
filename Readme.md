@@ -22,8 +22,13 @@ Therefore this library is considered unstable as such.
 	- Will use a version in C and C++ as baselines
 	
 ### Specification:  
-[MPI Version 4.1 Standard](https://www.mpi-forum.org/docs/mpi-4.1/mpi41-report.pdf).
+[MPI Version 4.1 Standard](https://www.mpi-forum.org/docs/mpi-4.1/mpi41-report.pdf)
+
+
 [Zig 0.12.0](https://github.com/ziglang/zig/milestone/23)
+
+#### Regards:
+	Much of the source is a re-implemnation/fork of [Open-MPI](https://www.open-mpi.org/)
 
 
 

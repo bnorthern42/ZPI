@@ -1,15 +1,10 @@
 pub fn main() !void {
-    // Prints to stderr (it's a shortcut based on `std.io.getStdErr()`)
-    std.debug.print("All your {s} are belong to us.\n", .{"codebase"});
-
-    // stdout is for the actual output of your application, for example if you
-    // are implementing gzip, then only the compressed bytes should be sent to
-    // stdout, not any debugging messages.
-    const stdout_file = std.io.getStdOut().writer();
-    var bw = std.io.bufferedWriter(stdout_file);
-    const stdout = bw.writer();
-
-    try stdout.print("Run `zig build test` to run the tests.\n", .{});
-
-    try bw.flush(); // don't forget to flush!
+//TODO, implement this til it all works. Basic level 1 implementations
+    var commworld_rank: i32;
+    MPI_Init(0,0);
+    MPI_Comm_rank(MPI_COMM_WORLD, &commworld_rank);
+    if(commworld_rank){
+        std.debug.print("Hello from Rank: {d}\n", .{commworld_rank});
+    }
+    MPI_Finalize();
 }
